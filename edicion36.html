@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Progresivo – Edición Nº 36</title>
+  <link rel="stylesheet" href="./css/styles.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="app-bar">
+    <nav class="nav-container">
+      <div class="nav-section left">
+        <a href="edicion36.html" class="nav-current">Edición N° 36</a>
+        <a href="./Ediciones_anteriores.html">Ediciones anteriores</a>
+      </div>
+
+      <div class="nav-section center">
+        <a href="index.html">
+          <img src="./assets/Logo negro.svg" alt="Logo Bellas Artes" class="logo" />
+        </a>
+      </div>
+
+      <div class="nav-section right">
+        <a href="./convocatorias.html">Convocatorias</a>
+        <a href="./sobre_progresivo.html">Sobre Progresivo</a>
+      </div>
+    </nav>
+  </header>
+
+
+    <!-- Bloque inicial y PDF -->
+    <section class="edition-header fade-up" id="top">
+      <div class="edition-header-text">
+        <p class="edition-tag">Edición N.º 36 · Junio 2025</p>
+
+        <h1 class="edition-title">
+          Arte, contemporaneidad y resistencia visual
+        </h1>
+
+        <p class="edition-intro">
+          La edición n.º 36 de la Revista <strong>Progresivo</strong> presenta contenidos que exploran 
+          las intersecciones entre arte y contemporaneidad. Destacan análisis sobre el carácter 
+          interactivo de la inteligencia artificial y su impacto en la creación artística, así como 
+          proyectos colaborativos entre semilleros de fotografía y música que abordan paisajes 
+          sonoros urbanos.
+        </p>
+
+        <p class="edition-intro">
+          Esta entrega también perfila a Medellín como escenario de resistencia cultural, reseña 
+          prácticas estudiantiles que toman la naturaleza como sujeto de creación visual y explora 
+          los bares de la ciudad como espacios de construcción simbólica. Además, recoge experiencias 
+          de internacionalización y procesos de creación colectiva que fortalecen el tejido artístico 
+          de la FUBA.
+        </p>
+
+        <a href="./assets/PROGRESIVO-No36-2.pdf" class="cta-button" download>
+          Descargar PDF de la edición
+        </a>
+      </div>
+
+      <div class="edition-header-media">
+        <img src="./assets/portada36.png" alt="Portada Revista Progresivo Nº 36">
+        <p class="edition-caption">
+          PROGRESIVO – Portada de la Edición Nº 36. 
+        </p>
+      </div>
+    </section>
+
+     <!-- REVISTA INTERACTIVA -->
+    <main class="edition-interactive">
+
+      <!-- COLUMNA IZQUIERDA -->
+      <aside class="edition-sidebar">
+        <div class="sidebar-card">
+          <h2>Contenidos de la edición</h2>
+          <p class="sidebar-intro">
+            Explora cada capítulo. Haz clic en un nombre para abrir el artículo.
+          </p>
+
+          <ul class="sidebar-list">
+            <li><button data-article="Editorial">Editorial</button></li>
+            <li><button data-article="Medellín y el arte criollo:">Medellín y el arte criollo: Identidad que brota
+                de lo cotidiano</button></li>
+            <li><button data-article="Cezanne">De Cézanne y sus dudas: una fascinación
+                llevada hasta el “suicidio creativo”</button></li>
+            <li><button data-article="Morfeo">El espejo de Morfeo: arte, formación y
+                expansión didáctica</button></li>
+            <li><button data-article="Bauhaus">Bauhaus Crisol Fotográfico</button></li>
+            <li><button data-article="Paisaje">Habitando la 42 desde el paisaje sonoro</button></li>
+            <li><button data-article="Próximamente">Próximamente</button></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- COLUMNA DERECHA (VIEWER) -->
+      <section class="edition-viewer" id="articleViewer">
+        <div class="viewer-placeholder">
+          <p>Selecciona un artículo para verlo aquí</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FOOTER TIPO FOOTER.pdf -->
+  <footer class="edition-footer">
+    <div class="edition-footer-top">
+
+      <div class="edition-footer-contents">
+        <h3><strong>Centro de Investigación, Creación y Transferencia</strong></h3>
+        <ul>
+          <li>Teléfono: 604 322 82 83</li>
+          <li>Correo: investigacion@bellasartesmed.edu.co</li>
+          <li>Dirección: Carrera 42A #48 - 86</li>
+          <li>Oficina: 2-400</li>
+        </ul>
+      </div>
+
+      
+    </div>
+
+    <div class="edition-footer-bottom">
+      <p>&copy; 2025 Fundación Universitaria Bellas Artes · Revista Progresivo</p>
+    </div>
+  </footer>
+
+<script src="./js/main.js"></script>
+</body>
+</html>

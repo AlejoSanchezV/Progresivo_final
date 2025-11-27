@@ -1,0 +1,1071 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(to bottom, #e6f2ff, #ffe5f0); /* Cielo y piel */
+  color: #000;
+  overflow-x: hidden;
+  transition: background 0.3s ease;
+}
+
+.app-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.nav-section {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-section.center {
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-section.left,
+.nav-section.right {
+  flex: 1;
+}
+
+.logo {
+  height: 28px;
+  display: block;
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  color: #ffd6c2;
+}
+.logo-center {
+  flex: none;
+  height: 40px;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.5s ease;
+}
+.hero-content {
+  position: absolute;
+  bottom: 4rem;
+  left: 4rem;
+  color: #000;
+  background: rgba(255,255,255,0.05);
+  padding: 1.5rem;
+  max-width: 500px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-content h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+.hero-sub {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.cta-button {
+  background: white;
+  color: black;
+  padding: 0.7rem 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.about, .gallery {
+  padding: 5rem 2rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+.about h2, .gallery h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+.about p {
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.gallery-grid a {
+  display: block;
+  text-align: center;
+}
+
+.gallery-item {
+  text-align: center;
+}
+
+.gallery-item figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #444;
+  opacity: 0.85;
+  font-style: italic;
+}
+
+.gallery-grid a figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #444;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ========== Corrección navbar centrado y responsive ========== */
+.app-bar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 2rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.nav-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.nav-section.center {
+  justify-content: center;
+}
+
+.logo {
+  height: 80px;
+  display: block;
+}
+
+.nav-section a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-section {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    height: 28px;
+    margin: 0.5rem 0;
+  }
+}
+
+/* ========== PÁGINA EDICIÓN 36 ========== */
+
+/* Contenedor general de la página de la edición */
+.edition-main {
+  max-width: 1250px;               
+  margin: 10rem;
+  padding: 10rem 5rem 5rem;
+  position: relative;     
+}
+
+/* ---------- Bloque inicial (portada + texto) ---------- */
+.edition-header {
+  max-width: 1200px;
+  margin: 6rem 16rem 4rem;   
+  padding: 0 3rem;          
+  display: grid;
+  grid-template-columns: minmax(0, 1.9fr) minmax(0, 1.4fr);
+  gap: 5rem;              
+  align-items: center;
+}
+
+.edition-header-text {
+  max-width: 640px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+}
+
+.edition-tag {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin: 0 0 0.5rem;
+}
+
+.edition-title {
+  font-size: 2.2rem;
+  margin: 0 0 1rem;
+}
+
+.edition-intro {
+  text-align: left;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.edition-header-media {
+  justify-self: right;
+}
+
+.edition-header-media img {
+  max-width: 400px;                
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.25);
+  object-fit: cover;
+  margin-top: 1.5rem;
+}
+
+.edition-caption {
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+  opacity: 0.8;
+}
+
+/* ---------- Footer edición (Footer.pdf) ---------- */
+
+.edition-footer {
+  background: #111;
+  color: #fff;
+  padding: 3rem 2rem 1.5rem;
+  margin-top: 3rem;
+}
+
+.edition-footer-top {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+
+.logo-footer {
+  height: 40px;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.edition-footer-edition {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.edition-footer-contents h3 {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+}
+
+.edition-footer-contents ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.edition-footer-contents li {
+  margin-bottom: 0.3rem;
+}
+
+.edition-footer-contents a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.edition-footer-contents a:hover {
+  text-decoration: underline;
+}
+
+.edition-footer-extra p {
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+.edition-footer-extra img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.edition-footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 0.8rem;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* ---------- Responsive portada + footer ---------- */
+
+@media (max-width: 900px) {
+  .edition-main {
+    padding: 6.5rem 1.5rem 3rem;
+  }
+
+  .edition-header {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .edition-header-media img {
+    margin-right: 0;
+    max-width: 360px;
+  }
+
+  .edition-footer-top {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ======== LAYOUT INTERACTIVO EDICIÓN ========= */
+
+/* Grid de dos columnas que vive DENTRO de .edition-main */
+.edition-interactive {
+  max-width: 1200px;                 
+  margin: 3.5rem auto 6.5rem;             
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr); /* IZQ: barra · DER: viewer */
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* ----- SIDEBAR IZQUIERDA ----- */
+.edition-sidebar {
+  position: sticky;
+  top: 120px;
+  height: calc(100vh - 140px);
+}
+
+.sidebar-card {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 1.8rem;
+  border-radius: 22px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.22);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+}
+
+.sidebar-intro {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  overflow-y: auto;
+}
+
+.sidebar-list li {
+  margin-bottom: 0.6rem;
+}
+
+.sidebar-list button {
+  font-size: 1rem;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: rgba(255,255,255,0.12);
+  border: none;
+  border-radius: 14px;
+  text-align: left;
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 200ms ease;
+  backdrop-filter: blur(10px);
+}
+
+.sidebar-list button:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateX(4px);
+}
+
+.sidebar-list button.active {
+  background: rgba(255,255,255,0.3);
+}
+
+/* ------- VIEWER DERECHA ------- */
+
+.edition-viewer {
+  min-height: 400px;
+}
+
+.viewer-placeholder {
+  background: rgba(255,255,255,0.07);
+  padding: 3rem;
+  border-radius: 22px;
+  text-align: center;
+  color: #555;
+  font-size: 1.2rem;
+  backdrop-filter: blur(12px);
+}
+
+/* Tarjetas de artículos */
+.article-card {
+  background: rgba(255,255,255,0.08);
+  padding: 2rem;
+  border-radius: 22px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.22);
+  margin-bottom: 2rem;
+}
+
+.article-card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.article-card p {
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.article-card figure {
+  text-align: center;
+  margin: 2.5rem auto;
+}
+
+.article-card img {
+  max-width: 450px;             
+  width: 100%;
+  display: block;               
+  margin: 2rem auto 0.8rem;      
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.article-card figure img {
+  max-width: 450px;
+  width: 100%;
+  display: block;
+  margin: 0 auto 0.8rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.article-card figcaption {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #444;
+  max-width: 450px;
+  line-height: 1.4;
+  margin: 0 auto;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.back-btn {
+  position: absolute;
+  top: 150px;          
+  left: 40px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-decoration: none;
+  transition: 200ms ease;
+  z-index: 999;
+}
+
+.back-btn:hover {
+  transform: scale(1.05) translateX(-3px);
+  background: rgba(255,255,255,0.35);
+}
+
+.icon-back {
+  width: 22px;
+  height: 22px;
+}
+
+.pdf-page {
+  padding-top: 130px;          
+}
+
+.pdf-content {
+  max-width: 1100px;
+  margin: 0 auto 4rem;         
+  padding: 1rem 2rem 3rem;
+  text-align: center;
+}
+
+.pdf-content h1 {
+  margin: 0 0 1.5rem;
+}
+
+.pdf-frame {
+  max-width: 1100px;
+  margin: 1.5rem auto 4rem;
+  border-radius: 24px;
+  overflow: hidden;                    
+  box-shadow: 0 18px 45px rgba(0,0,0,0.25);
+  background: #fff;
+}
+
+.pdf-frame iframe {
+  width: 100%;
+  height: 80vh;                       
+  display: block;
+}
+
+/* ========= Página Convocatorias ========= */
+
+.convoc-page {
+  padding-top: 120px;              /* deja aire debajo del navbar fijo */
+}
+
+.convoc-section {
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+  padding: 3rem 2rem 4rem;
+  text-align: center;
+}
+
+.convoc-section h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Caja grande de texto */
+
+.convoc-text-card {
+  background: rgba(255,255,255,0.08);
+  padding: 2.5rem 2.5rem;
+  border-radius: 22px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.22);
+  text-align: left;
+  line-height: 1.8;
+}
+
+/* Caja inferior con inscripción / descargas */
+
+.convoc-actions-card {
+  margin: 3rem auto 0;
+  max-width: 780px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 22px;
+  padding: 2rem 2.5rem 2.5rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.convoc-column {
+  flex: 1;
+}
+
+.convoc-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.75rem;
+  text-align: left;
+  position: relative;
+}
+
+.convoc-label::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 90px;
+  background: rgba(0,0,0,0.35);
+  margin-top: 0.4rem;
+}
+
+/* Botones tipo píldora */
+
+.convoc-btn {
+  background: white;
+  color: black;
+  padding: 1rem 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.16);
+  margin-top: 1rem;
+}
+
+.convoc-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.22);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .convoc-actions-card {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .convoc-section {
+    padding-inline: 1.5rem;
+  }
+}
+
+/* ========= Página Sobre Progresivo ========= */
+
+.about-page {
+  padding-top: 120px;             
+}
+
+.about-section {
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+  padding: 3rem 2rem 4rem;
+  text-align: center;
+}
+
+.about-section h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Tarjeta de logos / imagen */
+
+.about-hero-card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 22px;
+  padding: 1.8rem 2.2rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.22);
+  margin-bottom: 2.5rem;
+}
+
+.about-hero-card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Tarjeta de texto */
+
+.about-text-card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 22px;
+  padding: 2.5rem 2.6rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.22);
+  text-align: left;
+  line-height: 1.8;
+}
+
+.about-text-card p + p {
+  margin-top: 1rem;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .about-section {
+    padding-inline: 1.5rem;
+  }
+}
+
+/* =================== RESPONSIVE GLOBAL =================== */
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  .app-bar {
+    padding: 0.6rem 1.5rem;
+  }
+
+  .nav-container {
+    gap: 0.5rem;
+  }
+
+  .nav-section a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .app-bar {
+    padding-inline: 1rem;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .nav-section {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .logo {
+    height: 40px;
+  }
+}
+
+/* =================== HERO INDEX RESPONSIVE =================== */
+
+@media (max-width: 1024px) {
+  .hero {
+    height: auto;
+    padding-top: 110px; /* deja espacio por el navbar fijo */
+  }
+
+  .hero img {
+    height: 60vh;
+  }
+
+  .hero-content {
+    left: 2rem;
+    bottom: 2rem;
+    max-width: 420px;
+    padding: 1.2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero img {
+    height: 50vh;
+  }
+
+  .hero-content {
+    position: static;
+    margin: 1.5rem auto 3rem;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* =================== EDICIÓN 36 RESPONSIVE =================== */
+
+@media (max-width: 1200px) {
+  .edition-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 7rem 2rem 4rem;
+  }
+
+  .edition-header {
+    margin: 4rem auto 3rem;
+    padding: 0 1.5rem;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .edition-main {
+    padding: 6rem 1.5rem 3rem;
+  }
+
+  .edition-header {
+    grid-template-columns: 1fr;
+    margin: 3rem auto 2.5rem;
+    text-align: left;
+  }
+
+  .edition-header-media {
+    justify-self: center;
+  }
+
+  .edition-header-media img {
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 768px) {
+  .edition-interactive {
+    grid-template-columns: 1fr;   /* sidebar arriba, artículo abajo */
+    margin-top: 2.5rem;
+    gap: 1.5rem;
+  }
+
+  .edition-sidebar {
+    position: static;
+    height: auto;
+  }
+
+  .sidebar-card {
+    height: auto;
+  }
+
+  .edition-viewer {
+    width: 100%;
+  }
+
+  .article-card {
+    padding: 1.6rem;
+  }
+
+  .article-card img,
+  .article-card figure img {
+    max-width: 100%;
+  }
+
+  .back-btn {
+    top: 120px;
+    left: 16px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* =================== PDF VIEWER RESPONSIVE =================== */
+
+@media (max-width: 1024px) {
+  .pdf-page {
+    padding-top: 120px;
+  }
+
+  .pdf-content {
+    padding: 0.5rem 1.5rem 2.5rem;
+  }
+
+  .pdf-frame {
+    margin-inline: auto;
+    border-radius: 18px;
+  }
+
+  .pdf-frame iframe {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .pdf-content {
+    padding-inline: 1rem;
+  }
+
+  .pdf-frame {
+    border-radius: 16px;
+  }
+
+  .pdf-frame iframe {
+    height: 65vh;
+  }
+
+  .back-btn {
+    top: 115px;
+    left: 14px;
+  }
+}
+
+/* =================== EDICIONES ANTERIORES RESPONSIVE =================== */
+
+@media (max-width: 900px) {
+  .gallery {
+    padding-top: 6rem;
+    padding-inline: 1.5rem;
+  }
+
+  .gallery-grid {
+    gap: 1.5rem;
+  }
+
+  .gallery-grid img {
+    height: 360px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin-inline: auto;
+  }
+
+  .gallery-grid img {
+    height: 320px;
+  }
+}
+
+/* =================== CONVOCATORIAS EXTRA RESPONSIVE =================== */
+
+@media (max-width: 1024px) {
+  .convoc-section {
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .convoc-actions-card {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .convoc-text-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .convoc-actions-card {
+    padding: 1.5rem 1.6rem 2rem;
+  }
+
+  .convoc-label {
+    text-align: center;
+  }
+
+  .convoc-label::after {
+    margin-inline: auto;
+  }
+
+  .convoc-btn {
+    width: 100%;
+  }
+}
+
+/* =================== SOBRE PROGRESIVO RESPONSIVE =================== */
+
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .about-hero-card,
+  .about-text-card {
+    padding-inline: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-hero-card,
+  .about-text-card {
+    padding: 1.5rem 1.4rem 1.8rem;
+  }
+
+  .about-text-card {
+    text-align: left;
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+}
